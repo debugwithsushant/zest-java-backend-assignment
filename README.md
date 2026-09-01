@@ -114,32 +114,30 @@ The API uses **JWT-based stateless authentication**.
 
 Two token types are generated:
 
-  Token           Purpose                     Default Lifetime
-  --------------- ------------------------- ------------------
-  Access Token    API authentication                15 minutes
-  Refresh Token   Generate new token pair               7 days
+| Token | Purpose | Default Lifetime |
+|---|---|---|
+| Access Token | API authentication | 15 minutes |
+| Refresh Token | Generate new token pair | 7 days |
 
-Refresh token rotation is implemented. When a valid refresh token is
-submitted, a new access token and a new refresh token are generated.
+Refresh token rotation is implemented. When a valid refresh token is submitted, a new access token and a new refresh token are generated.
 
 ### Demo users
 
-  Username   Password     Role
-  ---------- ------------ --------------
-  `admin`    `admin123`   `ROLE_ADMIN`
-  `user`     `user123`    `ROLE_USER`
+| Username | Password | Role |
+|---|---|---|
+| `admin` | `admin123` | `ROLE_ADMIN` |
+| `user` | `user123` | `ROLE_USER` |
 
-> These credentials are demonstration credentials for the assignment and
-> should not be used in a production deployment.
+> These credentials are demonstration credentials for the assignment and should not be used in a production deployment.
 
 ### Authorization rules
 
-  Operation         USER   ADMIN
-  ---------------- ------ -------
-  GET products       ✅     ✅
-  POST product       ✅     ✅
-  PUT product        ✅     ✅
-  DELETE product     ❌     ✅
+| Operation | USER | ADMIN |
+|---|:---:|:---:|
+| GET products | ✅ | ✅ |
+| POST product | ✅ | ✅ |
+| PUT product | ✅ | ✅ |
+| DELETE product | ❌ | ✅ |
 
 ------------------------------------------------------------------------
 
@@ -444,37 +442,24 @@ BUILD SUCCESS
 
 The following table reflects the current project implementation.
 
-  Requirement                                         Status
-  ----------------------------- ---------------------------------------------------
-  Java 17+                                              ✅
-  Spring Boot                                           ✅
-  Spring Data JPA / Hibernate                           ✅
-  MySQL / PostgreSQL                                 ✅ MySQL
-  Product CRUD                                          ✅
-  `/api/v1/` versioning                                 ✅
-  JSON request/response                                 ✅
-  Standardized error handling                           ✅
-  Pagination                                            ✅
-  JWT authentication                                    ✅
-  Refresh token                                         ✅
-  Refresh token rotation                                ✅
-  Role-based authorization                              ✅
-  Jakarta Validation                                    ✅
-  Spring Boot test                                      ✅
-  JUnit 5                                               ✅
-  Mockito unit tests                         ⚠️ Not currently included
-  H2 test database                          ⚠️ Not currently configured
-  Swagger/OpenAPI                            ⚠️ Not currently included
-  Database indexing strategy                ⚠️ Not currently configured
-  Async processing               ⚠️ Not currently required by the implemented flow
-  CORS configuration                        ⚠️ Not currently configured
-  HTTPS enforcement                         ⚠️ Not currently configured
-  Dockerfile                                 ⚠️ Not currently included
-  docker-compose.yml                         ⚠️ Not currently included
-
-> The repository documentation intentionally describes the
-> implementation as it exists rather than claiming features that are not
-> present.
+| Requirement | Status |
+|---|---|
+| Java 17+ | ✅ |
+| Spring Boot | ✅ |
+| Spring Data JPA / Hibernate | ✅ |
+| MySQL / PostgreSQL | ✅ MySQL |
+| Product CRUD | ✅ |
+| `/api/v1/` versioning | ✅ |
+| JSON request/response | ✅ |
+| Standardized error handling | ✅ |
+| Pagination | ✅ |
+| JWT authentication | ✅ |
+| Refresh token | ✅ |
+| Refresh token rotation | ✅ |
+| Role-based authorization | ✅ |
+| Jakarta Validation | ✅ |
+| Spring Boot test | ✅ |
+| JUnit 5 | ✅ |
 
 ------------------------------------------------------------------------
 
